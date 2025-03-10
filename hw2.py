@@ -6,7 +6,7 @@ def get_cats_info(path):
     cats_list = []
 
     try:
-        with open(file_path, 'r', encoding='utf-8') as file:
+        with open(path, 'r', encoding='utf-8') as file:
             for line in file:
                 line = line.strip().split(',')
 

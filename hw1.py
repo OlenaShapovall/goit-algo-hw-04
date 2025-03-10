@@ -4,7 +4,7 @@ file_path = Path("./salary_file.txt")
 
 def total_salary(path):
     try:
-        with open(file_path, 'r', encoding='utf-8') as file:
+        with open(path, 'r', encoding='utf-8') as file:
             total_salary = 0
             num_developers = 0
 
@@ -22,7 +22,7 @@ def total_salary(path):
         salary_tuple = (total_salary, average_salary)
         return salary_tuple
     except FileNotFoundError:
-        print(f"Помилка: Файл '{file_path}' відсутній.")
+        print(f"Помилка: Файл '{path}' відсутній.")
 
 try:
     total, average = total_salary(file_path)
